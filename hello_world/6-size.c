@@ -2,6 +2,7 @@
 
 /**
  * main - Entry point
+ * Return: always 0 (sucess)
  * Description last project answer
  */
 int main(void) 
