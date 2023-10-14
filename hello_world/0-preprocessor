@@ -1,0 +1,2 @@
+#!/bin/bash
+CFILE=$(cpp -P fichier_source.c)
