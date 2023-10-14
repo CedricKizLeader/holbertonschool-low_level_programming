@@ -1,7 +1,8 @@
 #include <stdio.h>
 
 /*
-* Description: First programm
+ * main
+ * Description: First programm
 */
 
 int main(void)
