@@ -5,8 +5,6 @@
 * Return: Always 0 (Success)
 * Description: Second programm
 */
-
-
 int main(void) 
 {
 	printf("Size of a char: %lu byte(s)\n", sizeof(char));
