@@ -3,10 +3,10 @@
 /**
  * main - Entry point
  *
- * Return:(0)
  * Description last project answer
  */
-int main(void) {
+int main(void) 
+{
     
     printf(" - char: %zu octets\n", sizeof(char));
     printf(" - short: %zu octets\n", sizeof(short));
@@ -16,3 +16,6 @@ int main(void) {
     printf(" - float: %zu octets\n", sizeof(float));
     printf(" - double: %zu octets\n", sizeof(double));
     printf(" - long double: %zu octets\n", sizeof(long double));
+    return (0);
+}
+
