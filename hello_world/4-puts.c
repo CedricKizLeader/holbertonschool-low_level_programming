@@ -1,6 +1,11 @@
 #include <stdio.h>
-// c'est ok ?
-int main() {
+
+/*
+* Description: First programm
+*/
+
+int main(void)
+{
 puts("\"Programming is like building a multilingual puzzle");
-return 0;
+return (0);
 }
