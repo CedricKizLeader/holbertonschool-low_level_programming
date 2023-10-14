@@ -18,4 +18,3 @@ int main(void)
     printf(" - long double : %lu octets\n", sizeof(long double));
     return (0);
 }
-
