@@ -1,9 +1,10 @@
 #include <stdio.h>
 
-/*
- * main
+/**
+ * main - Entry point
+ * Return: Always 0 (Success)
  * Description: First programm
-*/
+ */
 
 int main(void)
 {
