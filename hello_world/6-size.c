@@ -5,7 +5,7 @@
  *
  * Return:(0)
  * Description last project answer
-int main() {
+int main(void) {
     
     printf(" - char: %zu octets\n", sizeof(char));
     printf(" - short: %zu octets\n", sizeof(short));
