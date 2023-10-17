@@ -6,31 +6,32 @@
 /**
  * main - Entry point
  * Return: Always 0 (Success)
- * Description: rand
+ * Description: Last digit
  */
 
+/** betty main tu me les brise */
 int main(void)
 {
 	int n;
-	int lastdigitof;
+	char lastdigitof;
 
 	srand(time(0));
-
 	n = rand() - RAND_MAX / 2;
+	int lastdigitof = (n % 10);
 
-	lastdigitof = (n % 10);
+
 	if (lastdigitof > 5)
-	{
+{
 		printf("lastdigitof %d is greater than 5\n", n);
-	}
+}
 	if (lastdigitof == 0)
-	{
+{
 		 printf("lastdigitof %d is 0\n", n);
-	}
+}
 	if (lastdigitof < 6 && lastdigitof != 0)
-	{
+{
 		printf("lastdigifof is %d is les than 6 and not 0\n", n);
-	}
+}
 
 	return (0);
 }
