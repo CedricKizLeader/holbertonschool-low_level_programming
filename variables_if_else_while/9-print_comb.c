@@ -5,7 +5,7 @@
  * Description: Alphabet
  */
 
-/** betty main Alphabet  minu */
+/** betty main Patience */
 int main(void)
 
 {
