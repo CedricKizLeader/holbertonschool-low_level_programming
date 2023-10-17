@@ -6,15 +6,21 @@
  */
 
 /** betty main Patience */
+
 int main(void)
 
+	int i = 0;
 {
-	putchar(0x30);
-	for (int i = 1; i < 10; i++)
+	putchar('0');
+
+	while (i < 9)
 	{
-		putchar(0x2C);
-		putchar(0x20);
-		putchar(0x30 + i);
+		putchar(',');
+		putchar(' ');
+	}
+	{
+		putchar(i + '0');
+		putchar('\n');
 	}
 	return (0);
 }
