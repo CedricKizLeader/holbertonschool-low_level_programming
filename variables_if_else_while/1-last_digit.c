@@ -22,16 +22,15 @@ int main(void)
 
 	if (lastdigitof > 5)
 {
-		printf("lastdigitof %d is greater than 5\n", n);
+	printf("lastdigitof %d is greater than 5\n", n);
 }
 	if (lastdigitof == 0)
 {
-		 printf("lastdigitof %d is 0\n", n);
+	printf("lastdigitof %d is 0\n", n);
 }
-	if (lastdigitof < 6 && lastdigitof != 0)
+if (lastdigitof < 6 && lastdigitof != 0)
 {
-		printf("lastdigifof is %d is les than 6 and not 0\n", n);
+	printf("lastdigifof is %d is les than 6 and not 0\n", n);
 }
-
-	return (0);
+return (0);
 }
