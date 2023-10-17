@@ -1,12 +1,10 @@
-#include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
 
 
 /**
  * main - Entry point
  * Return: Always 0 (Success)
- * Description: Last digit
+ * Description: Alphabet
  */
 
 /** betty main Alphabet  minu */
