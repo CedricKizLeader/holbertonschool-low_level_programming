@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-
 /**
  * main - Entry point
  * Return: Always 0 (Success)
@@ -10,11 +9,14 @@
 /** betty main Alphabet  minu */
 int main(void)
 {
-	for (char c = 'a'; c <= 'z'; c++)
+	char letter;
 
-		putchar(c);
+	for (letter = 'a'; letter <= 'z'; letter++)
+	
 	{
-	putchar('\n');
+		putchar(letter);
+		putchar('\n');
 	}
+	
 	return (0);
 }
