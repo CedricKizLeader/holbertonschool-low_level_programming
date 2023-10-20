@@ -7,9 +7,9 @@
  */
 int main(void)
 
-	char text[] = ("_Putchar");
+	char text[] = ["_Putchar"];
 {
-	putchar("_Putchar");
+	putchar('[_]Putchar');
 	putchar('\n');
 
 	return (0);
