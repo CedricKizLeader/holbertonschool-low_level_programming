@@ -9,11 +9,9 @@
  */
 int main(void)
 {
-	{
+
 	char text[] = "_Putchar\n";
 
 	write(1, text, sizeof(text) - 1);
-	}
-
 	return (0);
 }
