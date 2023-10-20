@@ -9,9 +9,13 @@
  */
 int main(void)
 {
+	char *text = "_Putchar\n";
 
-	const char *text = "_Putchar\n";
+	while (*text)
+	{
+		write(1, text, 1);
+		text++;
+	}
 
-	write(1, text, 9);
-	return (0);
+	return 0;
 }
