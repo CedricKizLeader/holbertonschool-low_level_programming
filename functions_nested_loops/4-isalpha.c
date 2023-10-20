@@ -2,7 +2,7 @@
 
 /**
 * _isalpha - returns 1 if character is lowercase else 0
-* _isalpha A or 1
+* @c: the character
 * Return: Always 0 (Success)
 */
 
