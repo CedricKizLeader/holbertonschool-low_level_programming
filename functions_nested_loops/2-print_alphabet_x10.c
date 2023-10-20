@@ -1,8 +1,9 @@
 #include "main.h"
 
 /**
- * print_alphabet:_x10 - jhftutrut
- * return : o.
+ * print_alphabet - Prints alphabet
+ * print_alphabet: x10
+ * Return : Always 0 (Sucess)
  */
 
 void print_alphabet_x10(void)
