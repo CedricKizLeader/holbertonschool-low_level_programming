@@ -9,7 +9,7 @@
  */
 int main(void)
 {
-	char *text = "_Putchar\n";
+	char *text = "_putchar\n";
 
 	while (*text)
 	{
@@ -17,5 +17,5 @@ int main(void)
 		text++;
 	}
 
-	return 0;
+	return (0);
 }
