@@ -1,2 +1,31 @@
-CC = GCC
-SRC = school.c main.c
+# Compiler
+CC = gcc
+
+# Source files
+SRC = main.c school.c
+
+# Name of the executable
+NAME = school
+
+# Derived variable for object files
+OBJ = $(SRC:.c=.o)
+
+# Dependency files
+DEP = $(OBJ:.o=.d)
+
+# Default target: 'all' will build the executable
+all: $(NAME)
+
+# Include dependency files
+-include $(DEP)
+
+# Build the executable
+$(NAME): $(OBJ)
+	$(CC) -o $@ $^
+
+# Compile source files to object files and generate dependency files
+%.o: %.c
+	$(CC) -MMD -MP -c -o $@ $<
+
+clean:
+	rm -f $(OBJ) $(NAME) $(DEP)
