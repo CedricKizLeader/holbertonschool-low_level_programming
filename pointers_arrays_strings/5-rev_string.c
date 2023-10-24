@@ -1,23 +1,27 @@
 #include "main.h"
 
 /**
- * rev_string - reverse,followed by a ('\n')
- * @s: vomisA caasI
+ * rev_string -  Prints a string in reverse
+ * @s: The string to print
  * return: void
  */
 
 void rev_string(char *s)
-
 {
-	int lenght = 0;
+	char *ff = s;
+	char a;
 
-	while (s[lenght] != '\0')
+	while (*ff)
 	{
-		lenght++;
+		++ff;
 	}
-	for (lenght -= 1; lenght >= 0; lenght--)
+	--ff;
+	while (s < ff)
 	{
-		_putchar(s[lenght]);
+		a = *s;
+		*s = *ff;
+		*ff = a;
+		++s;
+		--ff;
 	}
-	_putchar('\n');
 }
