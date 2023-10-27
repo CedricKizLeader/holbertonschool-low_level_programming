@@ -5,5 +5,5 @@
  * @s: the string to convert
  * Return: the converted string.
  */
+
 int _atoi(char *s)
-{
