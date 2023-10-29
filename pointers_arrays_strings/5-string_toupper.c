@@ -2,7 +2,7 @@
 
 /**
  * string_toupper - Transform loercases char into uppercases
- * @ado: the string
+ * @pls: the string
  * Return: returns the string in uppercase
  */
 
