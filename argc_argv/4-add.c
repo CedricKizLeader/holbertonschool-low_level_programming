@@ -1,30 +1,35 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 /**
- * main - Entry point of the program
- * @argc: The number of command line arguments
- * @argv: An array of strings containing the arguments
- *
- * Return: 0 for success, 1 for error
- */
+  * main - Entry point of program
+  * @argc: Counts the arguments
+  * @argv: Gives the values of the arguments
+  *
+  * Return: 1 if not two arguments, 0 otherwise
+  */
+
 int main(int argc, char *argv[])
 {
-	int i, result = 0;
+	int a;
+	int b;
+	int sum = 0;
 
-	if (argc == 1)
+	for (a = 1; a < argc; a++)
 	{
-		printf("0\n");
-		return (0);
-	}
-	for (i = 1; i < argc; i++)
-	{
-		if (*argv[i] < '0' || *argv[i] > '9')
+		for (b = 0; argv[a][b] != '\0'; b++)
 		{
-			printf("Error\n");
-			return (1);
+			if (argv[a][b] < '0' || argv[a][b] > '9')
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
-		result += atoi(argv[i]);
+
+		sum += atoi(argv[a]);
 	}
-	printf("%d\n", result);
+
+	printf("%d\n", sum);
+
 	return (0);
 }
