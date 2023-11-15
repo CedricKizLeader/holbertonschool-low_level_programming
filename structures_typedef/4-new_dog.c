@@ -1,48 +1,32 @@
 #include <stdlib.h>
 #include <string.h>
 
-/*
- * This function creates a new instance of a dog and stores a copy of the provided name and owner.
+#include "dog.h"
+
+/**
+ * new_dog - Creates a new dog
+ * @name: The dog's name
+ * @age: The dog's age
+ * @owner: The dog's owner
  *
- * Prototype: dog_t *new_dog(char *name, float age, char *owner);
- * Parameters:
- *   - name: The name of the dog.
- *   - age: The age of the dog.
- *   - owner: The owner of the dog.
+ * This function allocates memory for a new dog and copies the name and owner.
+ * If memory allocation fails at any point, it frees all previously allocated
+ * memory and returns NULL.
  *
- * Returns a pointer to the newly created dog instance or NULL if the function fails to allocate memory.
- */
-
-
-/*
- * This file contains the definition of a structure "dog_t" representing a dog,
- * along with a function "new_dog" to dynamically create an instance of this structure.
- * The stdlib.h and string.h libraries are included for the malloc, free, and strdup functions.
- */
-
-
-typedef struct dog
-{
-	char *name;
-	float age;
-	char *owner;
-} dog_t;
-
-/*
- * Function to dynamically create an instance of the "dog_t" structure.
- * It takes the name, age, and owner of the dog as parameters.
- * Returns a pointer to the newly created "dog_t" instance, or NULL in case of memory allocation error.
+ * Return: A pointer to the new dog, or NULL if the function fails
  */
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *newDog = malloc(sizeof(dog_t));
+
 	if (newDog == NULL)
 	{
 		return (NULL);
 	}
 
 	newDog->name = strdup(name);
+
 	if (newDog->name == NULL)
 	{
 		free(newDog);
@@ -50,6 +34,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 
 	newDog->owner = strdup(owner);
+
 	if (newDog->owner == NULL)
 	{
 		free(newDog->name);
@@ -60,4 +45,23 @@ dog_t *new_dog(char *name, float age, char *owner)
 	newDog->age = age;
 
 	return (newDog);
+}
+
+/**
+ * free_dog - Frees a dog
+ * @d: The dog to free
+ *
+ * This function frees the memory for the name, owner,
+ * and the structure itself.
+ */
+
+
+void free_dog(dog_t *d)
+{
+	if (d != NULL)
+	{
+		free(d->name);
+		free(d->owner);
+		free(d);
+	}
 }
