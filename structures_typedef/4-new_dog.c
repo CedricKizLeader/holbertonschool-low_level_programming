@@ -1,67 +1,35 @@
+#include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-
 #include "dog.h"
 
 /**
- * new_dog - Creates a new dog
- * @name: The dog's name
- * @age: The dog's age
- * @owner: The dog's owner
+ * new_dog - Crée une nouvelle structure de type struct dog_t
+ * @name: Pointeur vers le nom du chien
+ * @age: Âge du chien
+ * @owner: Pointeur vers le propriétaire du chien
  *
- * This function allocates memory for a new dog and copies the name and owner.
- * If memory allocation fails at any point, it frees all previously allocated
- * memory and returns NULL.
- *
- * Return: A pointer to the new dog, or NULL if the function fails
+ * Return: Pointeur vers la nouvelle structure dog_t ou NULL en cas d'échec.
  */
-
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *newDog = malloc(sizeof(dog_t));
+	dog_t *ndog;
+	int lowner = 0, lname = 0, i;
 
-	if (newDog == NULL)
-	{
+	ndog = malloc(sizeof(dog_t));
+	if (ndog == NULL || name == NULL || owner == NULL)
 		return (NULL);
-	}
-
-	newDog->name = strdup(name);
-
-	if (newDog->name == NULL)
-	{
-		free(newDog);
-		return (NULL);
-	}
-
-	newDog->owner = strdup(owner);
-
-	if (newDog->owner == NULL)
-	{
-		free(newDog->name);
-		free(newDog);
-		return (NULL);
-	}
-
-	newDog->age = age;
-
-	return (newDog);
-}
-
-/**
- * free_dog - Frees a dog
- * @d: The dog to free
- *
- * This function frees the memory for the name, owner,
- * and the structure itself.
- */
-
-
-void free_dog(dog_t *d)
-{
-	if (d != NULL)
-	{
-		free(d->name);
-		free(d->owner);
-		free(d);
-	}
+	while (name[lname])
+		lname++;
+	while (owner[lowner])
+		lowner++;
+	ndog->name = malloc(lname + 1);
+	ndog->owner = malloc(lowner + 1);
+	for (i = 0; i < lname; i++)
+		ndog->name[i] = name[i];
+	ndog->name[i] = '\0';
+	for (i = 0; i < lowner; i++)
+		ndog->owner[i] = owner[i];
+	ndog->owner[i] = '\0';
+	ndog->age = age;
+	return (ndog);
 }
