@@ -1,10 +1,8 @@
 #include <stdio.h>
 
-
 /**
- * main - nom du fichier
- * ecrit le nom de dossier
- * Return: 0.
+ * main - prints the name of the file it was compiled from
+ * Return: returns 0 (success)
  */
 
 int main(void)
