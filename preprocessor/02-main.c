@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define MESSAGE "2-main.c"
+
 
 /**
  * main - nom du fichier
