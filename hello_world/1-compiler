@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -c "$CMAIN" -o "$OMAIN"
+gcc -c "$CFILE" -o "$OFILE"
