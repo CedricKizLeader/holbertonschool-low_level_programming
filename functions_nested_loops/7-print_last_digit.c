@@ -1,23 +1,22 @@
 #include "main.h"
 
 /**
- * print_last_digit - last digit
- *@n: Last digit
- * Return: n.
+ * print_last_digit - print thelast digit of n
+ *@n: number to be checked
+ *
+ * Return: n if it's good
  */
 
 int print_last_digit(int n)
-{
-	while (n >= 10)
-	{
-		int sum = 0;
 
-		while (n > 0)
-		{
-			sum += n % 10;
-			n /= 10;
-		}
-		n = sum;
+{
+	int last_digit = n % 10;
+
+	if (n < 0)
+	{
+		last_digit *= -1;
 	}
-	return (n);
+
+	_putchar(last_digit + '0');
+	return (last_digit);
 }
