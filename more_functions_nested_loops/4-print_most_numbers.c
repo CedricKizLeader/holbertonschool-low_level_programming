@@ -14,12 +14,12 @@
 void print_most_numbers(void)
 
 {
-        int fatigue = 0;
+	int fatigue = 0;
 
-        for (fatigue = 0; fatigue < 10; fatigue++)
+	for (fatigue = 0; fatigue < 10; fatigue++)
 		if (fatigue != 2 && fatigue != 4)
-        {
-                _putchar(fatigue + '0');
-        }
-        _putchar('\n');
+		{
+			_putchar(fatigue + '0');
+		}
+	_putchar('\n');
 }
